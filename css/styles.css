@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --clr-bright-orange : hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --clr-very-light-gray: hsl(0, 0%, 95%);
+    --padding-section: 45px;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9538rem;
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr-very-light-gray);
+    color: var(--clr-transparent-white);
+}
+
+.cards { 
+    margin: 40px 0;
+}
+
+.card {
+    padding: var(--padding-section);
+    width: 65%;
+    max-width: 25ch;
+    margin: 0 auto;
+}
+
+.card--sedans {
+    background-color: var(--clr-bright-orange);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card--suvs {
+    background-color: var(--clr-dark-cyan);
+}
+
+.card--luxury {
+    background-color: var(--clr-very-dark-cyan);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card__title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2.5rem;
+    color: var(--clr-very-light-gray);
+    text-transform: uppercase;
+}
+
+.card__description {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.card__btn {
+    display: inline-block;
+    background-color: var(--clr-very-light-gray);
+    padding: 0.8em 2em;
+    color: var(--clr-bright-orange);
+    border-radius: 90px;
+    cursor: pointer;
+    transition: background-color .5s;
+    border: 2px solid var(--clr-very-light-gray);
+}
+
+.card__btn:hover {
+    opacity: .75;
+    background-color: transparent;
+    color: var(--clr-very-light-gray);
+    
+}
+
+.card__btn--suvs {
+    color: var(--clr-dark-cyan);
+}
+
+.card__btn--luxury {
+    color: var(--clr-very-dark-cyan);
+}
+
+
+@media only screen and (min-width: 1440px) {
+    body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+    }
+    .cards {
+        display: flex;
+        max-width: 87ch;
+    }
+
+    .card--sedans {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .card--luxury {
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+      }
+
+    .card__description {
+        font-size: 0.8rem;
+        margin-bottom: 60px;
+    }
+
+    .card__btn {
+        font-size: 0.8rem;
+    }
+}
